@@ -25,3 +25,30 @@ const thoughtSchema = new Schema(
     },
     reactions: [reactionSchema],
   },
+
+
+
+
+//   sends to json - can be used in Insomnia
+// virtuals
+  {
+    toJSON: {
+        getters: true,
+        virtuals: true,
+    },
+    id: false,
+  },
+);
+
+
+// virtuals
+thoughtSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
+});
+
+
+
+const Thought = model("Thought", thoughtSchema);
+
+// exports to be used
+module.exports = Thought;
