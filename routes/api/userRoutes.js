@@ -3,13 +3,13 @@ const router = require("express").Router();
 
 // imported from controller
 const {
-  getUsers,
-  getSingleUser,
-  createUser,
-  updateUser,
-  deleteUser,
-  addFriend,
-  removeFriend,
+    createUser,
+    getUsers,
+    getSingleUser,
+    updateUser,
+    addFriend,
+    deleteUser,
+    removeFriend,
 } = require("../../controllers/userController");
 
 
