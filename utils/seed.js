@@ -44,6 +44,42 @@ connection.once('open', async () => {
 
   // data which will appear in database
   console.table(allUsers);
+
+
+
+
+
+  // let allThoughts = [];
+  // for (let i = 0; i < 5; i++) {
+    
+  //   const thought = getRandomThoughts();
+  //   // const userEmail = `${thought}@email.com`;
+
+  //   // pushes into allThoughts empty array
+  //   allThoughts.push({
+  //     username: thought,
+  //     // email: userEmail,
+  //   });
+  // console.table(allThoughts);
+  // }
+
+
+  // let allReactions = [];
+  // for (let i = 0; i < 5; i++) {
+    
+  //   const reaction = getRandomReactions();
+  //   // const userEmail = `${thought}@email.com`;
+
+  //   // pushes into users empty array
+  //   allReactions.push({
+  //     username: reaction,
+  //     // email: userEmail,
+  //   });
+  // console.table(allReactions);
+  // }
+
+
+
   process.exit(0);
 });
 
