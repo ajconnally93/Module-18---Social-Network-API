@@ -76,42 +76,48 @@ const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 // have to use getRandomItem instead of .random, because again, this is not Python
 const getRandomUsername = () =>
     `${getRandomItem(names)}.${getRandomItem(names)}`;
+
+const getRandomThoughts = () =>
+    `${getRandomItem(thoughts)}`;
+
+const getRandomReactions = () =>
+    `${getRandomItem(reactions)}`;
   
 
 
-const getRandomThoughts = (int) => {
+// const getRandomThoughts = (int) => {
 
-    // will push into empty results array
-    let results = [];
+//     // will push into empty results array
+//     let results = [];
 
-    for (let i = 0; i < int; i++) {
-      results.push({
-        thoughtText: getRandomItem(thoughts),
-        username: getRandomUsername(),
-        reactions: [...getRandomReactions(5)],
-      });
-    }
+//     for (let i = 0; i < int; i++) {
+//       results.push({
+//         thoughtText: getRandomItem(thoughts),
+//         username: getRandomUsername(),
+//         reactions: [...getRandomReactions(5)],
+//       });
+//     }
 
-    return results;
-};
+//     return results;
+// };
   
-  // Function to generate random reactions
-const getRandomReactions = (int) => {
+//   // Function to generate random reactions
+// const getRandomReactions = (int) => {
     
-    if (int === 1) {
-      return getRandomItem(reactions);
-    }
+//     if (int === 1) {
+//       return getRandomItem(reactions);
+//     }
 
-    let results = [];
-    for (let i = 0; i < int; i++) {
-      results.push({
-        reactionBody: getRandomItem(reactions),
-        username: getRandomUsername(),
-      });
-    }
+//     let results = [];
+//     for (let i = 0; i < int; i++) {
+//       results.push({
+//         reactionBody: getRandomItem(reactions),
+//         username: getRandomUsername(),
+//       });
+//     }
 
-    return results;
-}
+//     return results;
+// }
   
 
 

@@ -24,17 +24,43 @@ connection.once('open', async () => {
   await Thought.deleteMany({});
 
   // creates empty array to store users in. will push into later
+
+
+  // can add seeds for thoughts and reactions into here
   let allUsers = [];
+
+
+  // let allThoughts = [];
+  // let allReactions = [];
+
+
+
   for (let i = 0; i < 5; i++) {
     
     const username = getRandomUsername();
     const userEmail = `${username}@email.com`;
 
+    const thought = getRandomThoughts();
+    const reaction = getRandomReactions();
+
     // pushes into users empty array
     allUsers.push({
       username,
       email: userEmail,
+      
+      thought,
+      reaction
     });
+
+    // allThoughts.push({
+    //   thought,
+    //   email: userEmail,
+    // });
+
+    // allReactions.push({
+    //   reaction,
+    //   email: userEmail
+    // });
   }
 
   
@@ -44,6 +70,9 @@ connection.once('open', async () => {
 
   // data which will appear in database
   console.table(allUsers);
+
+  // console.table(allThoughts);
+  // console.table(allReactions);
 
 
 
