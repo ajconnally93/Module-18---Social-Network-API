@@ -1,20 +1,19 @@
 
 // imports mongoDB
-const { connect, connection } = require('mongoose');
+// const { connect, connection } = require('mongoose');
 
 
-// will create db in MongoDB
-const conStr =
-  process.env.MONGODB_URI || 'mongodb://localhost/studentsDB';
+// // will create db in MongoDB
 
 
+// // exports connection
+// module.exports = connection;
 
+const mongoose = require('mongoose');
 
-connect(conStr, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/socialNetwork', {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true
 });
 
-
-// exports connection
-module.exports = connection;
+module.exports = mongoose.connection;

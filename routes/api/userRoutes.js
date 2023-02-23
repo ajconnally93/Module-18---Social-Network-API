@@ -15,7 +15,7 @@ const {
 
 // routers with get, put, post routes
 
-// landing page
+// landing page will get all users
 router.route("/").get(getUsers).post(createUser);
 // user by ID
 router.route('/:userId').get(getSingleUser).put(updateUser).delete(deleteUser);

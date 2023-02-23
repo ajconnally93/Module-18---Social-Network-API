@@ -48,3 +48,7 @@ connection.once('open', async () => {
 });
 
 // console.log("TEST AT END OF SEED.JS FILE");
+
+
+
+// add thoughts seeds
